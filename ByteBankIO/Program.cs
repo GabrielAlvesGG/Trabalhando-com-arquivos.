@@ -9,7 +9,7 @@ partial class Program
     {
         try
         {
-            CriarArquivo();
+            CriarArquivoComWriter();
             Console.ReadLine();
         }
         catch (Exception)
