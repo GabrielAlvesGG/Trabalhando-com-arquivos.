@@ -49,4 +49,32 @@ partial class Program
             throw ex;
         }
     }
+
+    static void TestaEscrita()
+    {
+        try
+        {
+            var caminhoNovoArquivo = "teste.txt";
+
+            using (var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
+            {
+                for (int i = 0; i < 10000; i++)
+                {
+                    escritor.WriteLine($"Linha {i}");
+                    escritor.Flush(); // Despeja o buffer para o Stream
+
+                    Console.WriteLine($"Linha {i} foi escrita no arquivo. Clique enter");
+                    Console.ReadLine();
+                }
+                
+             
+            }
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
 }
