@@ -9,13 +9,20 @@ partial class Program
     {
         try
         {
-            TestaEscrita();
-            Console.ReadLine();
+
+                EscritaBinaria();
+                LeituraBinaria();
+
+                Console.WriteLine("Aplicação finalizada...");
+
+                Console.ReadLine();
+            
+    
         }
-        catch (Exception)
+        catch (Exception ex)
         {
 
-            throw;
+            throw ex;
         }
         
     }
