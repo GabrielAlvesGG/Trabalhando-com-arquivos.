@@ -10,12 +10,22 @@ partial class Program
         try
         {
 
-            UsandoStreamDeEntrada();
+            //var linhas = File.ReadAllLines("contas.txt");
+            //Console.WriteLine(linhas.Length);
 
-            Console.WriteLine("Aplicação finalizada...");
+            //foreach (var linha in linhas)
+            //{
+            //    Console.WriteLine(linha);
+            //}
+
+            var bytesArquivo = File.ReadAllBytes("contas.txt");
+            Console.WriteLine($"Arquivo contas.txt possui {bytesArquivo.Length}");
+
+            File.WriteAllText("escrevendoComAClasseFile.txt", "teste WriteAllText");
+
+            Console.WriteLine("Aplicação finalizada");
 
             Console.ReadLine();
-            
     
         }
         catch (Exception ex)
