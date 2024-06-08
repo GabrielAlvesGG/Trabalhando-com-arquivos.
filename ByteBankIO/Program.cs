@@ -10,12 +10,11 @@ partial class Program
         try
         {
 
-                EscritaBinaria();
-                LeituraBinaria();
+            UsandoStreamDeEntrada();
 
-                Console.WriteLine("Aplicação finalizada...");
+            Console.WriteLine("Aplicação finalizada...");
 
-                Console.ReadLine();
+            Console.ReadLine();
             
     
         }
